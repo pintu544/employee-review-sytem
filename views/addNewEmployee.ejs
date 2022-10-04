@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="/CSS/editAndNewEmployee.css">
+
+<header> 
+    <div class="m-0 row p-3 d-flex justify-content-between backgroundHeader rounded border border-light">
+        <div class="col-4">
+            <h3 class="ms-5 text-light"><i class="fa-solid fa-user-plus"></i> Add New Employee</h3>
+        </div>
+        <div class="col-2">
+            <a href="/user/dashboard" class="removeUnderline"><h3 class="ms-5 text-light">Home</h3></a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="wrapper">
+        <form action="/user/addNewEmployee" method="POST">
+            <div class="m-0 ms-4 row d-flex justify-content-between">
+                <div class="col-4">
+                    <label for="name">Name</label><br>
+                    <input class="ms-2" type="text" name="userName" placeholder="Enter Name">
+                </div>
+                <div class="col-4">
+                    <label for="email">Email:</label><br>
+                    <input type="text" name="email" placeholder="Enter Your email" required>
+                </div>
+                <div class="col-4">
+                    <label for="password">Password:</label><br>
+                    <input class="ms-4" type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="m-0 row d-flex justify-content-between">
+                    <div class="col-4">
+                        <label for="per_review">Performance Review</label><br>
+                        <input type="number" name="performanceReview" placeholder="Performance">
+                    </div>
+                    <div class="col-4">
+                        <label for="status" class="fontSize">Participation</label><br>
+                        <span>
+                           
+                                <select name="participation" class="dropdown-items">
+                                    <option value="false">False</option>
+                                    <option value="true">True</option>
+                                </select>
+                        </span>
+                    </div>
+                    <div class="col-4">
+                        <label for="status" class="fontSize"> &ensp; Status</label><br>
+                        <span class="ms-4">
+                                <select name="status" class="dropdown-items">
+                                    <option value="employee">Employee</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn" type="submit"><h3><i>ADD EMPLOYEE</i></h3></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
