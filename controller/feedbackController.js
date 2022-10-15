@@ -2,7 +2,7 @@ const Feedback = require("../models/feedback");
 const User = require("../models/User");
 
 exports.createFeedback = async(req,res) =>{
-    try {
+    try { 
         if(req.cookies.userId){
             const userTofeedback = req.params.id;
             const feedback = await Feedback.create({
